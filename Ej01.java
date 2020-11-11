@@ -10,7 +10,11 @@ public class Ej01 {
         if (edad >=18){
             System.out.println(" Es mayor de edad ");
         }else{
+
             System.out.println(" Es menor de edad ");
+
+            System.out.println("Es menor de edad ");
+
         }
     }
 }
