@@ -2,8 +2,8 @@
 
 # Primer paso
 1. Mediante el uso de cd usando Git Bash, se situa el **directorio local** donde queremos trabajar. En este caso, elegiremos un fichero previamente creado llamado **carpetaCasa**.
-> Una vez estamos aquí, procedemos a iniciar un repositorio local mediante **git init** y transferir los archivos que tenemos en **remoto** a nuestro **repositorio local**, que en este caso es carpetaCasa mediante un **git clone**.
-> Usando el comando cd .. nos situamos en otro fichero previamente creado llamado **carpetaInstituto** , y mediante un **git clone** obtendremos los archivos de nuestro repositorio remoto, en este **repositorio local**. Esto es esencialmente lo mismo que hemos hecho en carpetaCasa.
+  * Una vez estamos aquí, procedemos a iniciar un repositorio local mediante **git init** y transferir los archivos que tenemos en **remoto** a nuestro **repositorio local**, que en este caso es carpetaCasa mediante un **git clone**.
+  * Usando el comando cd .. nos situamos en otro fichero previamente creado llamado **carpetaInstituto** , y mediante un **git clone** obtendremos los archivos de nuestro repositorio remoto, en este **repositorio local**. Esto es esencialmente lo mismo que hemos hecho en carpetaCasa.
 # Segundo paso
 2. Nos situamos en la carpetaCasa, y realizamos un cambio de manera manual, en uno de los documentos java disponibles, en este caso **Ej01.java**. 
 ⋅⋅* Una vez aquí, con nuestro pequeño cambio realizado, el cual añadiremos a nuestro repositorio mediante un **git add .** seguido de un **git commit -m ""** , dejaremos listo el cambio para ser subido a nuestro repositorio remoto mediante un **git push [Link a github]**
