@@ -8,9 +8,9 @@ public class Ej01 {
         System.out.println(" Introduzca Edad: ");
         int edad = sc.nextInt();
         if (edad >=18){
-            System.out.println("Mayor de edad ");
+            System.out.println(" Es mayor de edad ");
         }else{
-            System.out.println("Menor de edad ");
+            System.out.println(" Es menor de edad ");
         }
     }
 }
