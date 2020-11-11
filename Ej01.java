@@ -12,6 +12,9 @@ public class Ej01 {
         }else{
 
             System.out.println(" Es menor de edad ");
+
+            System.out.println("Es menor de edad ");
+
         }
     }
 }
