@@ -13,7 +13,7 @@
 # Tercer paso
 3. Aquí realizaremos los mismos cambios, tanto en carpetaCasa, como en carpetaInstituto. Subiremos los cambios de uno primero a nuestro remoto, y lo intentaremos con el otro siguiendo la misma dinámica mostrada anteriormente.
 *  Una vez más, tendremos un conflicto basado en merge, ya que los dos repositorios presentan los mismos cambios. Esto se solucionará manualmente en nuestro editor.
-*  Si abrimos el ultimo documento que hemos intentado subir al remoto, apreciamos las siguientes etiquetas: <<<<<<<<<HEAD , =======, >>>>>>>>>nombre de rama. Borramos estos indicadores, y dejaremos los cambios que finalmente queremos añadir a nuestro remoto. 
+*  Si abrimos el ultimo documento que hemos intentado subir al remoto, apreciamos las siguientes etiquetas: <<<<<<<<<HEAD , =======, >>>>>>>>>codigo commit. Borramos estos indicadores, y dejaremos los cambios que finalmente queremos añadir a nuestro remoto. 
 *  git add . seguido de git commit y git push, nos permitirá subir los cambios deseados, y así finalizar con el conflicto. Finalmente, usaremos un git pull en carpetaCasa y en carpetaInstituto, para así tener ambos actualizados respecto a nuestro remoto 
 # Cuarto paso
 4. Este paso es parecido al anterior, excepto que los cambios que realicemos en ambos repositorios, serán en la misma linea del fichero, pero contendrán otro texto en cada uno, a diferencia del paso anterior, en el que contenían el mismo texto.
