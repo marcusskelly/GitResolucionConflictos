@@ -5,3 +5,4 @@ git push origin test-1 nos enviará los cambios realizados a nuestro remoto.
 git checkout master nos avisa de que rama test-1 está por delante de master en lo que se refiere a cambios. 
 Al intentar hacer un git push con cambios realizados en la rama master, nos encontraremos con un error: failed to push some refs to 'https://github.com/marcusskelly/GitResolucionConflictos'
 Mediante un git pull en el repositorio local, nos dará la opcion de "merge by recursive strategy" ya que al haber realizado un git push desde la rama test-1, está había sido subida al remoto, con contenido editado previamente. El problema esque después nuestro documento de texto no se encontraba en el repositorio local, por eso hemos tenido que realizar un pull primero, para tenerlos todos sincronizados.
+Una vez realizado esto, nuestros commit en rama master pueden ser subidos al repositorio remoto mediante git push. 
