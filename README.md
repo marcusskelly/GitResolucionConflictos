@@ -43,4 +43,8 @@
 4. Llegados a este punto, al situarnos en rama test-1, se nos avisa que rama master se encuentra unos commits por detrás.
 *  Esto será solucionado mediante un **git merge master**, que nos permitirá unir ambas ramas.
 *  Finalmente, realizamos un git push desde rama master para finalmente tener local y remoto completamente sincronizados.
-
+# Quinto paso, gráfico en github
+5. En este gráfico podemos apreciar la rama master en color negro que cuenta con 7 commits en total. Por otro lado, nos encontramos con una rama azul y una verde, que contienen 4 y 2 commits respectivamente. 
+*  A su vez, la rama verde es fusionada con la azul en el segundo commit de esta, lo que refleja un *merge by recursive strategy* realizado en la práctica ResolucionConflictos. 
+*  Esta dinámica se mantiene a lo largo del historial cuando la rama azul se une a la negra en el tercer commit de esta. 
+*  Finalmente, se puede apreciar la creación de la rama test-1 en el cuarto commit de master y a su vez, siendo unida a master en commit número 6. 
