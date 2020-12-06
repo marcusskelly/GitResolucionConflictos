@@ -20,4 +20,31 @@
 *  Una vez realizados los cambios en carpetaCasa y carpetaInstituto, intentaremos ambos mediante un git push, pero nos enfrentaremos a un nuevo conflicto, cuya solución pasa de nuevo por abrir nuestro documento(último que se haya intentado subir) en el IDE, y borrar manualmente estas etiquetas HEAD y nombre de rama.
 *  En esta ocasión, podemos decidir entre quedarnos con los primeros cambios, con los segundos, o con ambos. Finalmente, procederemos a subir nuestros cambios mediante un git push.
 
-[Link a mi github](https://github.com/marcusskelly/GitResolucionConflictos)
+# GitTrabajoEnRamas
+
+# Primer paso
+1. Primero seleccionaremos la opcion **git branch test-1** para crear una rama que reflejara el extremo de una serie de confirmaciones.
+  * A continuación, seleccionamos este rama recién creada usando el comando **git checkout test-1**, que apuntará hacia ella. 
+  * Realizamos unos cambios en el repositorio local, seguido de **git add. + git commit**, y estos estarían listos para ser subidos al repositorio     remoto.
+  * git push origin test-1 nos enviará los cambios realizados a nuestro remoto. Sin embargo, la rama local no es enviada a nuestro remoto, ya que para enviarla necesitamos el comando **git push origin test-1**   
+# Segundo paso
+2. Teniendo en cuenta que el documento editado en repositorio local está siendo usado para redactar este README, los cambios son constantes, por lo tanto, rama test-1 tiende a estar siempre en la delantera. 
+ * Precisamente esto se avisa cuando realizamos un cambio de rama mediante el comando **git checkout master**
+ * Al intentar hacer un git push con cambios realizados en la rama master, nos encontraremos con un **error: failed to push some refs to 'https://github.com/marcusskelly/GitResolucionConflictos'** precisamente por la razón comentada previamente de tener un documento en constante edición en nuestro local. 
+  * Esto se resolvió haciendo un git pull en el repositorio local en rama master, para después usar el comando **:qa** que nos permite fusionar los cambios en rama test-1 con rama master.
+ * Una vez realizado esto, nuestros commit en rama master pueden ser subidos al repositorio remoto mediante git push.  
+ # Tercer paso
+3. LLega el turno de situarnos en carpetaInstituto situada en nuestro repositorio local, para obtener los cambios realizados desde carpetaCasa.
+*  Nuestro principal problema se encuentra en que al consultar las ramas existentes en carpetaInsituto mediante un **git branch --list**, no nos aparece la rama test-1 creada en carpetaCasa.
+*  Este problema lo solucionamos descargando la rama test-1 desde nuestro remoto a nuestro local usando el comando **git fetch + URL test-1:test-1**. 
+*  Se nos presenta un nuevo problema, y esque al hacer git checkout, nos aparece un conflicto: **your local changes to the file would be overwritten by checkout**. Esto posiblemente se debe a los continuos cambios en este documento de texto al intentar documentar los pasos seguidos en esta práctica.
+*  Para lidiar con este problema, nos iremos al propio documento de texto en carpetaInstituto, y borraremos un código alfa numérico señalado mediante una etiqueta. Después de guardar cambios, realizamos git add . + git commit y finalmente git push a remoto.
+# Cuarto paso
+4. Llegados a este punto, al situarnos en rama test-1, se nos avisa que rama master se encuentra unos commits por detrás.
+*  Esto será solucionado mediante un **git merge master**, que nos permitirá unir ambas ramas.
+*  Finalmente, realizamos un git push desde rama master para finalmente tener local y remoto completamente sincronizados.
+# Quinto paso, gráfico en github
+5. En este gráfico podemos apreciar la rama master en color negro que cuenta con 7 commits en total. Por otro lado, nos encontramos con una rama azul y una verde, que contienen 4 y 2 commits respectivamente. 
+*  A su vez, la rama verde es fusionada con la azul en el segundo commit de esta, lo que refleja un *merge by recursive strategy* realizado en la práctica ResolucionConflictos. 
+*  Esta dinámica se mantiene a lo largo del historial cuando la rama azul se une a la negra en el tercer commit de esta. 
+*  Finalmente, se puede apreciar la creación de la rama test-1 en el cuarto commit de master y a su vez, siendo unida a master en commit número 6. 
