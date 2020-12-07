@@ -12,7 +12,7 @@ public class Ej01 {
             System.out.println(" Es mayor de edad, es posible");
         }else{
 
-            System.out.println(" Es menor de edad, en efecto. ");
+            System.out.println(" Es menor de edad, en efecto. cambiamos de nuevo");
     
 
         }
