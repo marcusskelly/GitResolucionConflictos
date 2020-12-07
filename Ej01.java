@@ -9,10 +9,10 @@ public class Ej01 {
         int edad = sc.nextInt();
         if (edad >=18){
 
-            System.out.println(" Es mayor de edad, es posible");
+            System.out.println(" Es mayor de edad, es posible. Cambiamos aquí también");
         }else{
 
-            System.out.println(" Es menor de edad, en efecto. cambiamos de nuevo");
+            System.out.println(" Es menor de edad, en efecto. cambiamos de nuevo. De nuevo cambiamos");
     
 
         }
